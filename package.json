@@ -1,0 +1,15 @@
+{
+  "name": "anatta-store-script",
+  "version": "1.0.0",
+  "description": "A script to fetch and list product variants from a Shopify store using GraphQL, based on input product names.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Darshika Gilder",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5"
+  }
+}
