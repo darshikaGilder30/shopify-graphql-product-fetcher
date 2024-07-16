@@ -1,9 +1,12 @@
 require("dotenv").config(); // Load environment variables from .env file
 const axios = require("axios");
 
-// Read environment variables
-const adminToken = process.env.ADMIN_TOKEN;
-const apiUrl = `${process.env.STORE_URL}/admin/api/${process.env.API_VERSION}/graphql.json`;
+// Read environment variables with default values
+const adminToken =
+  process.env.ADMIN_TOKEN || "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";
+const apiUrl = process.env.STORE_URL
+  ? `${process.env.STORE_URL}/admin/api/${process.env.API_VERSION}/graphql.json`
+  : "https://anatta-test-store.myshopify.com/admin/api/2024-04/graphql.json";
 
 // GraphQL query to search products by name and list variants
 const productSearchQuery = `
